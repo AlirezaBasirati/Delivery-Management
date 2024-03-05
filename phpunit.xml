@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+
+            <!--Driver Authentication-->
+<!--            <directory suffix="CheckUserTest.php">./app/Services/AuthenticationService/Tests/Feature/Driver/Auth</directory>-->
+<!--            <directory suffix="VerifyUserTest.php">./app/Services/AuthenticationService/Tests/Feature/Driver/Auth</directory>-->
+<!--            <directory suffix="ForgetPasswordTest.php">./app/Services/AuthenticationService/Tests/Feature/Driver/Auth</directory>-->
+<!--            <directory suffix="ResetPasswordProcessTest.php">./app/Services/AuthenticationService/Tests/Feature/Driver/Auth</directory>-->
+<!--            <directory suffix="ChangePasswordTest.php">./app/Services/AuthenticationService/Tests/Feature/Driver/Auth</directory>-->
+
+<!--            <directory suffix="ActivationTest.php">./app/Services/FleetService/Tests/Feature/Driver/Driver</directory>-->
+<!--            <directory suffix="LocationTest.php">./app/Services/FleetService/Tests/Feature/Driver/DriverLocation</directory>-->
+<!--            <directory suffix="StaticMessageGroupTest.php">./app/Services/MessageService/Tests/Feature/Admin/StaticMessageGroup</directory>-->
+<!--            <directory suffix="StaticMessageTest.php">./app/Services/MessageService/Tests/Feature/Admin/StaticMessage</directory>-->
+<!--            <directory suffix="OrderStatusTest.php">./app/Services/OrderService/Tests/Feature/Admin/OrderStatus</directory>-->
+<!--            <directory suffix="OrderStateTest.php">./app/Services/OrderService/Tests/Feature/Admin/OrderState</directory>-->
+<!--            <directory suffix="AcceptOrderTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="ChangeOrderStatusTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="UnAssignOrderTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="ReturnOrderTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="CurrentOrderTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="CurrentOrderItemsTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="NeedSupportTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="OrdersListTest.php">./app/Services/OrderService/Tests/Feature/Driver/Order</directory>-->
+<!--            <directory suffix="OrdersListTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+            <directory suffix="StoreOrderTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>
+            <directory suffix="StoreOrderTest.php">./app/Services/OrderService/Tests/Feature/Customer/Order</directory>
+<!--            <directory suffix="ShowOrderTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+<!--            <directory suffix="UnAssignOrdersCountTest.php">./app/Services/OrderService/Tests/Feature/Driver/BroadcastOrder</directory>-->
+<!--            <directory suffix="UnAssignDriverFromOrderTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+<!--            <directory suffix="AssignDriverFromOrderTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+<!--            <directory suffix="BroadcastOrderAfterUnAssignTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+<!--            <directory suffix="ChangeOrderStatusTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+<!--            <directory suffix="ShowOrderOnMapTest.php">./app/Services/OrderService/Tests/Feature/Admin/Order</directory>-->
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_DRIVER" value="array"/>
+<!--         <env name="DB_CONNECTION" value="sqlite"/>-->
+<!--         <env name="DB_DATABASE" value=":memory:"/>-->
+        <env name="MAIL_MAILER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="TELESCOPE_ENABLED" value="false"/>
+    </php>
+</phpunit>
